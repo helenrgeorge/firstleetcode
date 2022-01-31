@@ -4,9 +4,10 @@
  * @return {number[]}
  */
 let twoSum = function(nums, target) {
-    for (let a=0; a<nums.length;a++){
+    for (let a=0; a<nums.length-1;a++){
     for (let b=1; b<nums.length + 1; b++) {
         let result = nums[a] + nums[b]
+        if (a===b){continue}
         if (result == target) {
             let results = [a, b]
             return results
